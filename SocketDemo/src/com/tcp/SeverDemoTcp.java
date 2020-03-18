@@ -17,7 +17,7 @@ public class SeverDemoTcp {
 		//3、获得输入流对象
 		InputStream is = socket.getInputStream();
 		int b;
-		while((b = is.read())!=-1) {
+		while((b = is.read())!=-1) {//read函数也可以阻塞，当os.close()时会得到结束标记-1
 			System.out.print((char)b);
 		}
 		//4、释放资源

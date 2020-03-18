@@ -12,7 +12,8 @@ public class ClientDemoTcp {
 		Socket socket = new Socket("127.0.0.1",10000);
 		//2、获取一个IO流开始写数据
 		OutputStream os = socket.getOutputStream();
-		os.write("hello tcp".getBytes());
+		os.write("hello tcp ".getBytes());
+		os.write("second sentence".getBytes());
 		//3、释放资源
 		os.close();
 		socket.close();
